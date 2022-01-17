@@ -1,0 +1,8 @@
+n = input('Digite um valor: ')
+print(type(n))
+print('É um alphanumerico: ')
+print(n.isalpha())
+print('É um número: ')
+print(n.isnumeric())
+print('esta em maiusculas: ')
+print(n.upper())
