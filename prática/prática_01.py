@@ -1,6 +1,6 @@
 nome = input('Qual o seu nome ? ')
 print('{}{}{} Seja Muito Bem Vindo  ' .format('\033[31m', nome, '\033[m'))
-
+dia = input('Qual foi o dia do seu nascimento: ')
 mes = input('Qual foi o mes de seu nascimento: ')
 ano = input('Qual foi o ano de seu nascimento: ')
 print('\033[31m' + dia + '/' + mes + '/' + ano + '\033[m')
