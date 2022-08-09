@@ -1,0 +1,11 @@
+nome = input('Qual o seu nome ? ')
+print('{}{}{} Seja Muito Bem Vindo  ' .format('\033[31m', nome, '\033[m'))
+dia = input('Qual foi o dia do seu nascimento: ')
+mes = input('Qual foi o mes de seu nascimento: ')
+ano = input('Qual foi o ano de seu nascimento: ')
+print('\033[31m' + dia + '/' + mes + '/' + ano + '\033[m')
+Numero_um = int(input('Digite um numero: '))
+Numero_dois = int(input('Digite o segundo numero: '))
+soma = Numero_um + Numero_dois
+print(soma)
+print("A soma dos numeros é: {}{}{}".format('\033[31m', soma, '\033[m'))

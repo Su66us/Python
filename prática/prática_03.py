@@ -1,0 +1,8 @@
+n = input('\033[33m Digite um valor: \033[m')
+print(type(n))
+print('\033[32mÉ um alphanumerico: \033[m ')
+print(n.isalpha())
+print('\033[34mÉ um número: \033[m')
+print(n.isnumeric())
+print('\033[35mesta em maiusculas: \033[m')
+print(n.upper())
