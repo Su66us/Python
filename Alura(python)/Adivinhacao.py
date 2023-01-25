@@ -49,6 +49,8 @@ def jogar():
         
 
     print('Fim de jogo')
+if(__name__ =="__main__"):
+    jogar()
 # if == se
 #else == se não
 #elif == se não se
