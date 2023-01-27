@@ -9,7 +9,7 @@ def jogar():
     acertou = False
 
     print(letras_acertadas)
-
+    #  lista [] tuplas() não pode mudar imutavel estrura de dados 
     # enquanto (true e true)
     while(not enforcou and not acertou):
         
