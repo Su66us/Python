@@ -1,7 +1,6 @@
 import random
 
 
-
 def jogar():
 
     imprime_mensagem_abertura()
@@ -41,7 +40,8 @@ def imprime_mensagem_abertura():
     print("***Bem vindo ao jogo da Forca!***")
     print("*********************************")
 def carrega_palavra_secreta():
-    arquivo = open("palavra.txt", "r")
+    arquivo = open ("E:\Python\Alura(python)\palavra.txt", "r")
+   
     palavras = []
 
     for linha in arquivo:
