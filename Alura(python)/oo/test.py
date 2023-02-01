@@ -5,7 +5,7 @@ def cria_conta(numero, titular, saldo, limite):
     return conta
 
 
-def deposita(conta, valor):
+def deposita(conta, valor): 
     conta["saldo"] += valor
 
 
