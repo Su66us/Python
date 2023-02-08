@@ -1,5 +1,5 @@
 class Programa:# class mãe
-      def __init__(self, nome, ano, duracao):
+      def __init__(self, nome, ano):
          self._nome = nome.title() #_Programa__nome faria a conversão para não pegarem de fora 
          self.ano = ano
          self._likes = 0
@@ -19,12 +19,17 @@ class Programa:# class mãe
       @nome.setter
       def nome(self, novo_nome):
          self._nome = novo_nome.title()
+
+      def __str__(self):
+         return f'{self._nome} - {self.ano} - {self._likes} Likes'
       
 class Filme(Programa):# Class filha
       def __init__(self, nome, ano, duracao):
          super().__init__(nome, ano)
          self.duracao = duracao
          
+      def __str__(self):
+         return f'{self._nome} - {self.ano} - {self.duracao} min - {self._likes} Likes'
       
      
 
@@ -33,6 +38,8 @@ class Serie(Programa):# Class filha
         super().__init__(nome, ano)
         self.temporadas  = temporadas
 
+      def __str__(self):
+         return f'{self._nome} - {self.ano} - {self.temporadas} temporadas - {self._likes} Likes'
 
     
     
@@ -41,13 +48,27 @@ vingadores.dar_like()
 vingadores.dar_like()
 vingadores.dar_like()
 
-print(f' {vingadores.nome} -  {vingadores.ano} - {vingadores.duracao}: {vingadores.likes}')
-
 atlanta = Serie('atlanta', 2018, 2)
 atlanta.dar_like()
 atlanta.dar_like()
 atlanta.dar_like()
-print(f'{atlanta.nome} - {atlanta.ano} -  {atlanta.temporadas} - {atlanta.likes}')
+
+
+filmes_e_series = [vingadores, atlanta]#lista
+
+for programa in filmes_e_series:
+
+   print(programa)
+
+
+
+# if hasattr(programa, 'duracao'):
+   #   detalhes = programa.duracao
+# else: 
+   #  detalhes = programa.temporadas # verificar se tem o atributo na lista
+
+
+
 # novo jeito de formatar usado no python mais recente ao invés de colocar print( 'text {}'. format())
 # se colocar o f na frente ex  print(f'nome: {nome variavel}')
 # Por Herança a Class filha Herda alguns atribuos da Claas Mãe
