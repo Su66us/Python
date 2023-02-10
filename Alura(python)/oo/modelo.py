@@ -1,3 +1,4 @@
+
 class Programa:# class mãe
       def __init__(self, nome, ano):
          self._nome = nome.title() #_Programa__nome faria a conversão para não pegarem de fora 
@@ -46,13 +47,17 @@ class Playlist:
       self.nome = nome
       self._programa = programa
 
+   def __getitem__(self, item):
+      return self._programa[item]
+
+
    @property
    def listagem(self):
-       return self._programa
+      return self._programa
    
    
-   @property
-   def tamanho(self):
+  
+   def __len__(self):
       return len(self._programa)      
 
 
@@ -78,11 +83,12 @@ playlist_fim_de_semana = Playlist('Fim de semana', filmes_e_series)
 print(f'Tamanho da playlist? {len(playlist_fim_de_semana)}')
 
 
-for programa in playlist_fim_de_semana.listagem:
 
+for programa in playlist_fim_de_semana:
    print(programa)
 
-print(f'tá ou não tá? {demolidor in playlist_fim_de_semana}')
+
+#print(f'tá ou não tá? {demolidor in playlist_fim_de_semana}')
 
 
 # if hasattr(programa, 'duracao'):
