@@ -311,7 +311,7 @@ for conta in contas:
  """
 
 # Herança e polimorfismo
-
+""" 
 from abc import ABCMeta, abstractclassmethod
 class Conta:# quandotem o _ é por que é deixado privado
   
@@ -362,21 +362,52 @@ conta16 = ContaCorrente(16)
 conta16.deposita(1000)
 conta17 = ContaPoupança(17)
 conta17.deposita(1000)
-""" 
+
 contas = [conta16, conta17]
 for conta in contas:
   conta.passa_o_mes() # duck typing
-  print(conta) """
+  print(conta) 
 #tupla cada posição tem um significado diferente
 # evitar usar array agora
 # evitamos usar array puro, se precisamos de trabalho numérico, é costume usar o numpy
 import array as arr
 import numpy as np
 
-""" arr.array('d', [1, 3.5])
+arr.array('d', [1, 3.5])
 numeros = np.array([1, 3.5])
-numeros """
+numeros 
 conta1 = ContaSalario(37)
 print(conta1)
 conta2 = ContaSalario(37)
-print(conta1 == conta2)
+print(conta1 == conta2) 
+
+idades = [15, 87, 32, 65, 56, 32, 49, 37]
+
+for i in range(len(idades)):
+  print(i, idades[i])
+
+range(len(idades)) # lazy...
+
+enumerate(idades) # lazy
+
+list(range(len(idades))) # forcei a geração dos valores
+
+list(enumerate(idades))
+
+for indice, idade in enumerate(idades): # unpacking da nossa tupla
+  print(indice, "x", idade)
+
+usuarios = [
+    ("Guilherme", 37, 1981),
+    ("Daniela", 31, 1987),
+    ("Paulo", 39, 1979)
+]
+
+for nome, idade, nascimento in usuarios: # ja desempacotando
+  print(nome)
+
+for nome, _, _ in usuarios: # ja desempacotando, ignorando o resto
+  print(nome)
+
+lsita mutavel  
+"""
